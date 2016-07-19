@@ -16,9 +16,17 @@ class UdaciList
     @items.push LinkItem.new(description, options) if type == "link"
   end
 
-  def delete(index)
-    raise UdaciListErrors::IndexExceedsListSize.new("list contains #{items.size} records") if index >= @items.size
-    @items.delete_at(index - 1)
+  def delete(*indexes)
+    items_to_delete = []
+
+    indexes.each do |index|
+      raise UdaciListErrors::IndexExceedsListSize.new("list contains #{items.size} records") if index >= @items.size
+      items_to_delete << @items.at(index - 1)
+    end
+
+    items_to_delete.each do |each|
+      @items.delete(each)
+    end
   end
 
   def all

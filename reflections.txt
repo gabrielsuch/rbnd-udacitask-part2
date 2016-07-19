@@ -1,13 +1,23 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+test-unit to add unit tests.
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Allow deletion of multiple items
+  b) Change the priority levels of items
+  Bonus: Unit tests
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+~ 2 hours
+
 2. What was the most rewarding challenge you conquered?
+To have code working in just few minutes.
+
 3. What two additional features did you build? Why?
+Delete multiple items, Change priority level of items and unit tests.
+
 4. Where do you still have room to grow?
+Understand better how ruby works under the wood
