@@ -1,5 +1,3 @@
-require 'chronic'
-
 class TodoItem
   include Listable
   attr_reader :due, :priority
@@ -25,9 +23,9 @@ class TodoItem
   end
 
   def format_priority
-    value = " ⇧" if @priority == "high"
-    value = " ⇨" if @priority == "medium"
-    value = " ⇩" if @priority == "low"
+    value = " ⇧".colorize(:red) if @priority == "high"
+    value = " ⇨".colorize(:blue) if @priority == "medium"
+    value = " ⇩".colorize(:white) if @priority == "low"
     value = "" if !@priority
     return value
   end

@@ -3,6 +3,9 @@ GEM
   specs:
     chronic (0.10.2)
     colorize (0.8.0)
+    power_assert (0.2.7)
+    test-unit (3.1.7)
+      power_assert
 
 PLATFORMS
   ruby
@@ -10,6 +13,7 @@ PLATFORMS
 DEPENDENCIES
   chronic
   colorize
+  test-unit
 
 BUNDLED WITH
    1.12.5
