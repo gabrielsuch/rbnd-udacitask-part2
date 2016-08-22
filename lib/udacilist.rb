@@ -20,7 +20,7 @@ class UdaciList
     items_to_delete = []
 
     indexes.each do |index|
-      raise UdaciListErrors::IndexExceedsListSize.new("list contains #{items.size} records") if index >= @items.size
+      raise UdaciListErrors::IndexExceedsListSize.new("list is 1 based and contains #{items.size} records") if index < 1 || index > @items.size
       items_to_delete << @items.at(index - 1)
     end
 

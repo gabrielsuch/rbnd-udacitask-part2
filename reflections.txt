@@ -11,7 +11,7 @@ test-unit to add unit tests.
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
-~ 2 hours
+~ 3 hours
 
 2. What was the most rewarding challenge you conquered?
 To have code working in just few minutes.
