@@ -2,6 +2,11 @@ class UdaciList
   attr_reader :title, :items
 
   @@valid_types = [ "todo", "event", "link" ]
+  @@type_class = { todo: TodoItem, event: EventItem, link: LinkItem }
+
+  def self.type_class
+    @@type_class
+  end
 
   def initialize(options={})
     @title = options[:title]
@@ -35,8 +40,7 @@ class UdaciList
   end
 
   def filter(item_type)
-    type_class = { todo: TodoItem, event: EventItem, link: LinkItem }
-    items_type = @items.select { |item| item.class == type_class[item_type.to_sym] }
+    items_type = @items.select { |item| item.class == self.class.type_class[item_type.to_sym] }
 
     display_title "Items with type: #{item_type}"
     display_items items_type
